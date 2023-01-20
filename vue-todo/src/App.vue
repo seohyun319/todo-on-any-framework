@@ -15,21 +15,15 @@
 </template>
 
 <script lang="ts">
-// import JSConfetti from "js-confetti";
+import JSConfetti from "js-confetti";
 import HeaderWrapper from "./components/HeaderWrapper.vue";
 import MainWrapper from "./components/MainWrapper.vue";
-// import type { TodoItemType } from "./components/TodoItem.vue";
+import type { TodoItemType } from "./components/TodoItem.vue";
 import { saveData, getData } from "./utils/storage";
-
-interface TodoItemType {
-  id: number;
-  todo: string;
-  completed: boolean;
-}
 
 const TODO_STORAGE_KEY = "vue-todo-list";
 
-// const jsConfetti = new JSConfetti();
+const jsConfetti = new JSConfetti();
 
 export default {
   components: {
@@ -69,11 +63,11 @@ export default {
           todoItem.completed = !todoItem.completed; // toggle
 
           // animation
-          // if (todoItem.completed) {
-          //   jsConfetti.addConfetti({
-          //     emojis: ["🌈", "⚡️", "💥", "✨", "💫", "🌸"],
-          //   });
-          // }
+          if (todoItem.completed) {
+            jsConfetti.addConfetti({
+              emojis: ["🌈", "⚡️", "💥", "✨", "💫", "🌸"],
+            });
+          }
         }
       });
 
