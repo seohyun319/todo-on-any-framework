@@ -1,12 +1,18 @@
 <script>
+	import { todoData } from '../store';
+
 	export let todo;
-	let { text, completed } = todo;
+	let { id, text, completed } = todo;
+
+	const handleRemoveTodo = (/** @type {number} */ id) => {
+		$todoData = $todoData.filter((todo) => todo.id !== id);
+	};
 </script>
 
 <div class="todo-item">
 	<input type="checkbox" bind:checked={completed} />
 	<div>{text}</div>
-	<button>x</button>
+	<button on:click={() => handleRemoveTodo(id)}>x</button>
 </div>
 
 <style>
