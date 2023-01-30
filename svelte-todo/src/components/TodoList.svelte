@@ -1,8 +1,16 @@
-<script>
+<script lang="ts">
 	import { todoData } from '../store';
 	import TodoItem from './TodoItem.svelte';
 </script>
 
-{#each $todoData as todo (todo.id)}
-	<TodoItem {todo} />
-{/each}
+<div>
+	{#each $todoData as todo (todo.id)}
+		<TodoItem {todo} />
+	{/each}
+</div>
+
+<style>
+	div {
+		min-height: 10rem;
+	}
+</style>

@@ -17,10 +17,38 @@
 	};
 </script>
 
-<input
-	type="text"
-	placeholder="오늘 뭐 할 거야?"
-	bind:value={todoText}
-	on:keypress={(e) => e.key === 'Enter' && handleAddTodo()}
-/>
-<button on:click={handleAddTodo}>입력</button>
+<div>
+	<input
+		type="text"
+		placeholder="오늘 구매할 할 일"
+		bind:value={todoText}
+		on:keypress={(e) => e.key === 'Enter' && handleAddTodo()}
+	/>
+	<button on:click={handleAddTodo}>+</button>
+</div>
+
+<style>
+	div {
+		display: flex;
+		padding: 1rem 0;
+		border-top: 2px dashed;
+	}
+	input {
+		border: none;
+		border-radius: 0.4rem;
+		padding: 0.4rem;
+		width: 100%;
+	}
+	button {
+		border: none;
+		background-color: rgb(231, 255, 253);
+		border-radius: 6px;
+		width: 2rem;
+		height: 2rem;
+		margin-left: 0.4rem;
+		cursor: pointer;
+		color: rgb(123, 182, 254);
+		font-weight: bold;
+		font-size: 1.3rem;
+	}
+</style>

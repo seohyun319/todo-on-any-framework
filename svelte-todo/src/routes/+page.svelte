@@ -3,5 +3,30 @@
 	import TodoList from '../components/TodoList.svelte';
 </script>
 
-<TodoInput />
-<TodoList />
+<section>
+	<header>TODO RECEIPT</header>
+	<TodoInput />
+	<TodoList />
+</section>
+
+<style>
+	section {
+		background: linear-gradient(180deg, rgba(234, 194, 255, 0.5) 0%, rgba(192, 198, 255, 0.8) 100%);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+		max-width: 20rem;
+		padding: 1rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	header {
+		font-size: 2rem;
+		font-weight: bold;
+		text-align: center;
+		margin: 1rem 0 1.4rem;
+	}
+</style>
