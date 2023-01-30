@@ -12,10 +12,15 @@
 			completed: false
 		};
 
-		$todoData = [...$todoData, newTodo];
+		$todoData = [newTodo, ...$todoData];
 		todoText = '';
 	};
 </script>
 
-<input type="text" placeholder="오늘 뭐 할 거야?" bind:value={todoText} />
+<input
+	type="text"
+	placeholder="오늘 뭐 할 거야?"
+	bind:value={todoText}
+	on:keypress={(e) => e.key === 'Enter' && handleAddTodo()}
+/>
 <button on:click={handleAddTodo}>입력</button>
