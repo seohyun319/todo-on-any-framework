@@ -51,4 +51,7 @@
 		font-weight: bold;
 		font-size: 1.3rem;
 	}
+	button:hover {
+		background-color: rgb(196, 217, 255);
+	}
 </style>

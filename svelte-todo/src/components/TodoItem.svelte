@@ -14,25 +14,26 @@
 	};
 </script>
 
-<div class="todo-item">
+<div class:completed>
 	<label>
 		<input type="checkbox" bind:checked={completed} on:click={() => handleCompleteTodo(id)} />
-		<div>{text}</div>
+		{text}
 	</label>
 	<button on:click={() => handleRemoveTodo(id)}>x</button>
 </div>
 
 <style>
-	.todo-item,
-	label {
-		display: flex;
-	}
-	.todo-item {
+	div {
 		padding: 0.2rem 0;
 		align-items: center;
+		display: flex;
 	}
-	.todo-item:hover {
+	div:hover {
 		font-weight: bold;
+	}
+	.completed {
+		color: rgb(114, 156, 255);
+		text-decoration: line-through;
 	}
 	label {
 		display: flex;

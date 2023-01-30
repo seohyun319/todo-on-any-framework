@@ -16,8 +16,8 @@
 		flex-direction: column;
 		justify-content: center;
 		width: 100%;
-		max-width: 20rem;
-		padding: 1rem;
+		max-width: 18rem;
+		padding: 1rem 2rem;
 		position: absolute;
 		top: 50%;
 		left: 50%;
