@@ -12,5 +12,6 @@
 <style>
 	div {
 		min-height: 10rem;
+		padding-bottom: 1rem;
 	}
 </style>
