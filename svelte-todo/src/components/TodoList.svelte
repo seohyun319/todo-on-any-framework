@@ -5,6 +5,7 @@
 
 <div>
 	{#each $todoData as todo (todo.id)}
+		<!-- <TodoItem todo={todo}와 동일 -->
 		<TodoItem {todo} />
 	{/each}
 </div>

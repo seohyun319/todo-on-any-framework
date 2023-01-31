@@ -1,8 +1,16 @@
+<script lang="ts">
+	export let ratio: number;
+	$: isCompleteAll = ratio === 1;
+	$: barcodeText = isCompleteAll ? 'good job' : 'cheer up';
+</script>
+
 <link
 	href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap"
 	rel="stylesheet"
 />
-<div>progress</div>
+<div class:isCompleteAll>
+	{barcodeText}
+</div>
 
 <style>
 	div {
@@ -11,7 +19,6 @@
 		display: flex;
 		justify-content: center;
 	}
-
 	div:before {
 		content: '';
 		position: absolute;
@@ -22,12 +29,11 @@
 		transition: 800ms;
 	}
 
-	div:hover:before {
-		animation: line 500ms forwards;
+	.isCompleteAll {
+		animation: blink 500ms 200ms;
 	}
-
-	div:hover {
-		animation: blink 500ms 300ms;
+	.isCompleteAll:before {
+		animation: line 500ms backwards;
 	}
 
 	@keyframes line {
@@ -39,7 +45,6 @@
 			transform: translateX(-3px) translateY(38px);
 		}
 	}
-
 	@keyframes blink {
 		from {
 			color: #eee;
@@ -47,9 +52,5 @@
 		to {
 			color: black;
 		}
-	}
-
-	div:focus {
-		outline: none;
 	}
 </style>

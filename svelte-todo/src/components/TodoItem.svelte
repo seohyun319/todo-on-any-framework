@@ -14,6 +14,7 @@
 	};
 </script>
 
+<!-- <div class:completed={completed}> -->
 <div class:completed>
 	<label>
 		<input type="checkbox" bind:checked={completed} on:click={() => handleCompleteTodo(id)} />

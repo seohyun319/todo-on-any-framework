@@ -1,5 +1,4 @@
 <script>
-	import Barcode from '../components/Barcode.svelte';
 	import TodoInput from '../components/TodoInput.svelte';
 	import TodoList from '../components/TodoList.svelte';
 	import Total from '../components/Total.svelte';
@@ -10,7 +9,6 @@
 	<TodoInput />
 	<TodoList />
 	<Total />
-	<Barcode />
 </section>
 
 <style>
