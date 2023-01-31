@@ -24,6 +24,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 	header {
 		font-size: 2rem;

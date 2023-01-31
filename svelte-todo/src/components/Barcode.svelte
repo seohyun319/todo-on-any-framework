@@ -8,7 +8,7 @@
 	href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap"
 	rel="stylesheet"
 />
-<div class:isCompleteAll>
+<div class:isCompleteAll style="--ratio: {ratio * 100}%">
 	{barcodeText}
 </div>
 
@@ -18,6 +18,16 @@
 		font-size: 2.8rem;
 		display: flex;
 		justify-content: center;
+		margin: 0.6rem 0 1rem;
+		background: linear-gradient(
+			90deg,
+			rgb(116, 114, 255) var(--ratio),
+			rgb(55, 55, 55) var(--ratio)
+		);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		--css-ratio: 0;
 	}
 	div:before {
 		content: '';
