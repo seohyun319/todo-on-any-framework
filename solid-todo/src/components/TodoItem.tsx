@@ -6,7 +6,7 @@ import close from "../assets/close.svg";
 import type { Todo } from "../types/todo";
 
 interface TodoItemProps extends Todo {
-  onDone?: () => void; // 완료
+  onToggle?: () => void; // 완료
   onDelete?: () => void;
   // 순서 변경
   onUpPress?: () => void;
@@ -16,7 +16,7 @@ interface TodoItemProps extends Todo {
 const TodoItem = (props: TodoItemProps) => {
   return (
     <div class={styles.container}>
-      <div class={styles.checkIconWrap} onClick={props.onDone}>
+      <div class={styles.checkIconWrap} onClick={props.onToggle}>
         <img
           src={checkLine}
           class={styles.checkIcon}
